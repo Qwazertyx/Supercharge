@@ -1,0 +1,2198 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.825476,
+     45.746808
+    ]
+   },
+   "properties": {
+    "id": 0,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2285,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.827794,
+     45.746808
+    ]
+   },
+   "properties": {
+    "id": 1,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2227,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.823159,
+     45.748425
+    ]
+   },
+   "properties": {
+    "id": 2,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2604,
+    "inaccessible": true,
+    "blocked_by": "La Saône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.825476,
+     45.748425
+    ]
+   },
+   "properties": {
+    "id": 3,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3335,
+    "inaccessible": true,
+    "blocked_by": "Emprise ferroviaire de Perrache"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.827794,
+     45.748425
+    ]
+   },
+   "properties": {
+    "id": 4,
+    "weight_uniform": 1.0,
+    "weight_density": 0.333,
+    "inaccessible": true,
+    "blocked_by": "Emprise ferroviaire de Perrache"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.830112,
+     45.748425
+    ]
+   },
+   "properties": {
+    "id": 5,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2611,
+    "inaccessible": true,
+    "blocked_by": "Emprise ferroviaire de Perrache"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.823159,
+     45.750042
+    ]
+   },
+   "properties": {
+    "id": 6,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2986,
+    "inaccessible": true,
+    "blocked_by": "La Saône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.825476,
+     45.750042
+    ]
+   },
+   "properties": {
+    "id": 7,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3952,
+    "inaccessible": true,
+    "blocked_by": "Emprise ferroviaire de Perrache"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.827794,
+     45.750042
+    ]
+   },
+   "properties": {
+    "id": 8,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4127,
+    "inaccessible": true,
+    "blocked_by": "Emprise ferroviaire de Perrache"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.830112,
+     45.750042
+    ]
+   },
+   "properties": {
+    "id": 9,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3443,
+    "inaccessible": true,
+    "blocked_by": "Emprise ferroviaire de Perrache"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.832429,
+     45.750042
+    ]
+   },
+   "properties": {
+    "id": 10,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2362,
+    "inaccessible": true,
+    "blocked_by": "Emprise ferroviaire de Perrache"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.823159,
+     45.751659
+    ]
+   },
+   "properties": {
+    "id": 11,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2847,
+    "inaccessible": true,
+    "blocked_by": "La Saône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.825476,
+     45.751659
+    ]
+   },
+   "properties": {
+    "id": 12,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3997,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.827794,
+     45.751659
+    ]
+   },
+   "properties": {
+    "id": 13,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4506,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.830112,
+     45.751659
+    ]
+   },
+   "properties": {
+    "id": 14,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4136,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.832429,
+     45.751659
+    ]
+   },
+   "properties": {
+    "id": 15,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3189,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.834747,
+     45.751659
+    ]
+   },
+   "properties": {
+    "id": 16,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2285,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.839382,
+     45.751659
+    ]
+   },
+   "properties": {
+    "id": 17,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2091,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.8417,
+     45.751659
+    ]
+   },
+   "properties": {
+    "id": 18,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2405,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.844017,
+     45.751659
+    ]
+   },
+   "properties": {
+    "id": 19,
+    "weight_uniform": 1.0,
+    "weight_density": 0.236,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.823159,
+     45.753276
+    ]
+   },
+   "properties": {
+    "id": 20,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2433,
+    "inaccessible": true,
+    "blocked_by": "La Saône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.825476,
+     45.753276
+    ]
+   },
+   "properties": {
+    "id": 21,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3741,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.827794,
+     45.753276
+    ]
+   },
+   "properties": {
+    "id": 22,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4688,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.830112,
+     45.753276
+    ]
+   },
+   "properties": {
+    "id": 23,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4836,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.832429,
+     45.753276
+    ]
+   },
+   "properties": {
+    "id": 24,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4209,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.834747,
+     45.753276
+    ]
+   },
+   "properties": {
+    "id": 25,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3353,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.837065,
+     45.753276
+    ]
+   },
+   "properties": {
+    "id": 26,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2918,
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.839382,
+     45.753276
+    ]
+   },
+   "properties": {
+    "id": 27,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3091,
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.8417,
+     45.753276
+    ]
+   },
+   "properties": {
+    "id": 28,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3419,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.844017,
+     45.753276
+    ]
+   },
+   "properties": {
+    "id": 29,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3278,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.846335,
+     45.753276
+    ]
+   },
+   "properties": {
+    "id": 30,
+    "weight_uniform": 1.0,
+    "weight_density": 0.251,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.823159,
+     45.754893
+    ]
+   },
+   "properties": {
+    "id": 31,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2102,
+    "inaccessible": true,
+    "blocked_by": "La Saône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.825476,
+     45.754893
+    ]
+   },
+   "properties": {
+    "id": 32,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3573,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.827794,
+     45.754893
+    ]
+   },
+   "properties": {
+    "id": 33,
+    "weight_uniform": 1.0,
+    "weight_density": 0.497,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.830112,
+     45.754893
+    ]
+   },
+   "properties": {
+    "id": 34,
+    "weight_uniform": 1.0,
+    "weight_density": 0.5688,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.832429,
+     45.754893
+    ]
+   },
+   "properties": {
+    "id": 35,
+    "weight_uniform": 1.0,
+    "weight_density": 0.545,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.834747,
+     45.754893
+    ]
+   },
+   "properties": {
+    "id": 36,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4642,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.837065,
+     45.754893
+    ]
+   },
+   "properties": {
+    "id": 37,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4015,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.839382,
+     45.754893
+    ]
+   },
+   "properties": {
+    "id": 38,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3946,
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.8417,
+     45.754893
+    ]
+   },
+   "properties": {
+    "id": 39,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4065,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.844017,
+     45.754893
+    ]
+   },
+   "properties": {
+    "id": 40,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3734,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.846335,
+     45.754893
+    ]
+   },
+   "properties": {
+    "id": 41,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2786,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.823159,
+     45.75651
+    ]
+   },
+   "properties": {
+    "id": 42,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2053,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.825476,
+     45.75651
+    ]
+   },
+   "properties": {
+    "id": 43,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3696,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.827794,
+     45.75651
+    ]
+   },
+   "properties": {
+    "id": 44,
+    "weight_uniform": 1.0,
+    "weight_density": 0.5463,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.830112,
+     45.75651
+    ]
+   },
+   "properties": {
+    "id": 45,
+    "weight_uniform": 1.0,
+    "weight_density": 0.6661,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.832429,
+     45.75651
+    ]
+   },
+   "properties": {
+    "id": 46,
+    "weight_uniform": 1.0,
+    "weight_density": 0.6786,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.834747,
+     45.75651
+    ]
+   },
+   "properties": {
+    "id": 47,
+    "weight_uniform": 1.0,
+    "weight_density": 0.6021,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.837065,
+     45.75651
+    ]
+   },
+   "properties": {
+    "id": 48,
+    "weight_uniform": 1.0,
+    "weight_density": 0.5111,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.839382,
+     45.75651
+    ]
+   },
+   "properties": {
+    "id": 49,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4592,
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.8417,
+     45.75651
+    ]
+   },
+   "properties": {
+    "id": 50,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4285,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.844017,
+     45.75651
+    ]
+   },
+   "properties": {
+    "id": 51,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3671,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.846335,
+     45.75651
+    ]
+   },
+   "properties": {
+    "id": 52,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2618,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.823159,
+     45.758127
+    ]
+   },
+   "properties": {
+    "id": 53,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2239,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.825476,
+     45.758127
+    ]
+   },
+   "properties": {
+    "id": 54,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4024,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.827794,
+     45.758127
+    ]
+   },
+   "properties": {
+    "id": 55,
+    "weight_uniform": 1.0,
+    "weight_density": 0.601,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.830112,
+     45.758127
+    ]
+   },
+   "properties": {
+    "id": 56,
+    "weight_uniform": 1.0,
+    "weight_density": 0.752,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.832429,
+     45.758127
+    ]
+   },
+   "properties": {
+    "id": 57,
+    "weight_uniform": 1.0,
+    "weight_density": 0.7957,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.834747,
+     45.758127
+    ]
+   },
+   "properties": {
+    "id": 58,
+    "weight_uniform": 1.0,
+    "weight_density": 0.7298,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.837065,
+     45.758127
+    ]
+   },
+   "properties": {
+    "id": 59,
+    "weight_uniform": 1.0,
+    "weight_density": 0.6142,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.839382,
+     45.758127
+    ]
+   },
+   "properties": {
+    "id": 60,
+    "weight_uniform": 1.0,
+    "weight_density": 0.5104,
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.8417,
+     45.758127
+    ]
+   },
+   "properties": {
+    "id": 61,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4253,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.844017,
+     45.758127
+    ]
+   },
+   "properties": {
+    "id": 62,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3309,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.846335,
+     45.758127
+    ]
+   },
+   "properties": {
+    "id": 63,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2201,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.823159,
+     45.759744
+    ]
+   },
+   "properties": {
+    "id": 64,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2409,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.825476,
+     45.759744
+    ]
+   },
+   "properties": {
+    "id": 65,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4227,
+    "inaccessible": true,
+    "blocked_by": "La Saône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.827794,
+     45.759744
+    ]
+   },
+   "properties": {
+    "id": 66,
+    "weight_uniform": 1.0,
+    "weight_density": 0.626,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.830112,
+     45.759744
+    ]
+   },
+   "properties": {
+    "id": 67,
+    "weight_uniform": 1.0,
+    "weight_density": 0.7945,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.832429,
+     45.759744
+    ]
+   },
+   "properties": {
+    "id": 68,
+    "weight_uniform": 1.0,
+    "weight_density": 0.8706,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.834747,
+     45.759744
+    ]
+   },
+   "properties": {
+    "id": 69,
+    "weight_uniform": 1.0,
+    "weight_density": 0.8306,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.837065,
+     45.759744
+    ]
+   },
+   "properties": {
+    "id": 70,
+    "weight_uniform": 1.0,
+    "weight_density": 0.7058,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.839382,
+     45.759744
+    ]
+   },
+   "properties": {
+    "id": 71,
+    "weight_uniform": 1.0,
+    "weight_density": 0.5551,
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.8417,
+     45.759744
+    ]
+   },
+   "properties": {
+    "id": 72,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4142,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.844017,
+     45.759744
+    ]
+   },
+   "properties": {
+    "id": 73,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2865,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.823159,
+     45.761361
+    ]
+   },
+   "properties": {
+    "id": 74,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2292,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.825476,
+     45.761361
+    ]
+   },
+   "properties": {
+    "id": 75,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3977,
+    "inaccessible": true,
+    "blocked_by": "La Saône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.827794,
+     45.761361
+    ]
+   },
+   "properties": {
+    "id": 76,
+    "weight_uniform": 1.0,
+    "weight_density": 0.5927,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.830112,
+     45.761361
+    ]
+   },
+   "properties": {
+    "id": 77,
+    "weight_uniform": 1.0,
+    "weight_density": 0.7759,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.832429,
+     45.761361
+    ]
+   },
+   "properties": {
+    "id": 78,
+    "weight_uniform": 1.0,
+    "weight_density": 0.8948,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.834747,
+     45.761361
+    ]
+   },
+   "properties": {
+    "id": 79,
+    "weight_uniform": 1.0,
+    "weight_density": 0.8999,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.837065,
+     45.761361
+    ]
+   },
+   "properties": {
+    "id": 80,
+    "weight_uniform": 1.0,
+    "weight_density": 0.7842,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.839382,
+     45.761361
+    ]
+   },
+   "properties": {
+    "id": 81,
+    "weight_uniform": 1.0,
+    "weight_density": 0.5972,
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.8417,
+     45.761361
+    ]
+   },
+   "properties": {
+    "id": 82,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4046,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.844017,
+     45.761361
+    ]
+   },
+   "properties": {
+    "id": 83,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2459,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.825476,
+     45.762978
+    ]
+   },
+   "properties": {
+    "id": 84,
+    "weight_uniform": 1.0,
+    "weight_density": 0.328,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.827794,
+     45.762978
+    ]
+   },
+   "properties": {
+    "id": 85,
+    "weight_uniform": 1.0,
+    "weight_density": 0.5117,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.830112,
+     45.762978
+    ]
+   },
+   "properties": {
+    "id": 86,
+    "weight_uniform": 1.0,
+    "weight_density": 0.7155,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.832429,
+     45.762978
+    ]
+   },
+   "properties": {
+    "id": 87,
+    "weight_uniform": 1.0,
+    "weight_density": 0.887,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.834747,
+     45.762978
+    ]
+   },
+   "properties": {
+    "id": 88,
+    "weight_uniform": 1.0,
+    "weight_density": 0.9478,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.837065,
+     45.762978
+    ]
+   },
+   "properties": {
+    "id": 89,
+    "weight_uniform": 1.0,
+    "weight_density": 0.8526,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.839382,
+     45.762978
+    ]
+   },
+   "properties": {
+    "id": 90,
+    "weight_uniform": 1.0,
+    "weight_density": 0.6402,
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.8417,
+     45.762978
+    ]
+   },
+   "properties": {
+    "id": 91,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4041,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.844017,
+     45.762978
+    ]
+   },
+   "properties": {
+    "id": 92,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2176,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.825476,
+     45.764595
+    ]
+   },
+   "properties": {
+    "id": 93,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2497,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.827794,
+     45.764595
+    ]
+   },
+   "properties": {
+    "id": 94,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4289,
+    "inaccessible": true,
+    "blocked_by": "La Saône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.830112,
+     45.764595
+    ]
+   },
+   "properties": {
+    "id": 95,
+    "weight_uniform": 1.0,
+    "weight_density": 0.6585,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.832429,
+     45.764595
+    ]
+   },
+   "properties": {
+    "id": 96,
+    "weight_uniform": 1.0,
+    "weight_density": 0.879,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.834747,
+     45.764595
+    ]
+   },
+   "properties": {
+    "id": 97,
+    "weight_uniform": 1.0,
+    "weight_density": 0.9865,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.837065,
+     45.764595
+    ]
+   },
+   "properties": {
+    "id": 98,
+    "weight_uniform": 1.0,
+    "weight_density": 0.909,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.839382,
+     45.764595
+    ]
+   },
+   "properties": {
+    "id": 99,
+    "weight_uniform": 1.0,
+    "weight_density": 0.6801,
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.8417,
+     45.764595
+    ]
+   },
+   "properties": {
+    "id": 100,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4129,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.844017,
+     45.764595
+    ]
+   },
+   "properties": {
+    "id": 101,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2049,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.827794,
+     45.766212
+    ]
+   },
+   "properties": {
+    "id": 102,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3777,
+    "inaccessible": true,
+    "blocked_by": "La Saône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.830112,
+     45.766212
+    ]
+   },
+   "properties": {
+    "id": 103,
+    "weight_uniform": 1.0,
+    "weight_density": 0.6265,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.832429,
+     45.766212
+    ]
+   },
+   "properties": {
+    "id": 104,
+    "weight_uniform": 1.0,
+    "weight_density": 0.873,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.834747,
+     45.766212
+    ]
+   },
+   "properties": {
+    "id": 105,
+    "weight_uniform": 1.0,
+    "weight_density": 1.0,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.837065,
+     45.766212
+    ]
+   },
+   "properties": {
+    "id": 106,
+    "weight_uniform": 1.0,
+    "weight_density": 0.9284,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.839382,
+     45.766212
+    ]
+   },
+   "properties": {
+    "id": 107,
+    "weight_uniform": 1.0,
+    "weight_density": 0.6929,
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.8417,
+     45.766212
+    ]
+   },
+   "properties": {
+    "id": 108,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4142,
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.827794,
+     45.767829
+    ]
+   },
+   "properties": {
+    "id": 109,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3442,
+    "inaccessible": true,
+    "blocked_by": "La Saône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.830112,
+     45.767829
+    ]
+   },
+   "properties": {
+    "id": 110,
+    "weight_uniform": 1.0,
+    "weight_density": 0.5873,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.832429,
+     45.767829
+    ]
+   },
+   "properties": {
+    "id": 111,
+    "weight_uniform": 1.0,
+    "weight_density": 0.8218,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.834747,
+     45.767829
+    ]
+   },
+   "properties": {
+    "id": 112,
+    "weight_uniform": 1.0,
+    "weight_density": 0.9362,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.837065,
+     45.767829
+    ]
+   },
+   "properties": {
+    "id": 113,
+    "weight_uniform": 1.0,
+    "weight_density": 0.863,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.839382,
+     45.767829
+    ]
+   },
+   "properties": {
+    "id": 114,
+    "weight_uniform": 1.0,
+    "weight_density": 0.6403,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.8417,
+     45.767829
+    ]
+   },
+   "properties": {
+    "id": 115,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3803,
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.827794,
+     45.769446
+    ]
+   },
+   "properties": {
+    "id": 116,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2915,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.830112,
+     45.769446
+    ]
+   },
+   "properties": {
+    "id": 117,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4935,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.832429,
+     45.769446
+    ]
+   },
+   "properties": {
+    "id": 118,
+    "weight_uniform": 1.0,
+    "weight_density": 0.6787,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.834747,
+     45.769446
+    ]
+   },
+   "properties": {
+    "id": 119,
+    "weight_uniform": 1.0,
+    "weight_density": 0.759,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.837065,
+     45.769446
+    ]
+   },
+   "properties": {
+    "id": 120,
+    "weight_uniform": 1.0,
+    "weight_density": 0.6893,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.839382,
+     45.769446
+    ]
+   },
+   "properties": {
+    "id": 121,
+    "weight_uniform": 1.0,
+    "weight_density": 0.5064,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.8417,
+     45.769446
+    ]
+   },
+   "properties": {
+    "id": 122,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2993,
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.827794,
+     45.771063
+    ]
+   },
+   "properties": {
+    "id": 123,
+    "weight_uniform": 1.0,
+    "weight_density": 0.2087,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.830112,
+     45.771063
+    ]
+   },
+   "properties": {
+    "id": 124,
+    "weight_uniform": 1.0,
+    "weight_density": 0.346,
+    "inaccessible": true,
+    "blocked_by": "La Saône"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.832429,
+     45.771063
+    ]
+   },
+   "properties": {
+    "id": 125,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4644,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.834747,
+     45.771063
+    ]
+   },
+   "properties": {
+    "id": 126,
+    "weight_uniform": 1.0,
+    "weight_density": 0.5075,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.837065,
+     45.771063
+    ]
+   },
+   "properties": {
+    "id": 127,
+    "weight_uniform": 1.0,
+    "weight_density": 0.4525,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.839382,
+     45.771063
+    ]
+   },
+   "properties": {
+    "id": 128,
+    "weight_uniform": 1.0,
+    "weight_density": 0.3284,
+    "inaccessible": false,
+    "blocked_by": null
+   }
+  }
+ ]
+}

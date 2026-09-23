@@ -1,0 +1,24 @@
+# Supercharge
+#
+#   docker compose up
+#
+# puis ouvrir http://localhost:8000
+#
+# Aucune variable d'environnement à fournir, aucun secret, aucune clé d'API.
+# L'application démarre directement sur l'instance de référence documentée
+# dans le README (Lyon, Presqu'île, N = 9, B = 3, r = 300 m, poids uniformes).
+
+services:
+  supercharge:
+    build: .
+    image: supercharge:1.0.0
+    container_name: supercharge
+    ports:
+      - "8000:8000"
+    environment:
+      # Plafond du simulateur quantique, en qubits. Au-delà, le solveur QAOA
+      # se désactive proprement en expliquant pourquoi, et le solveur
+      # classique continue de tourner. La valeur 14 est mesurée : voir le
+      # tableau de temps dans backend/solvers/qaoa.py.
+      SUPERCHARGE_QAOA_MAX_QUBITS: "14"
+    restart: unless-stopped

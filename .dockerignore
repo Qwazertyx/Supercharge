@@ -1,0 +1,13 @@
+.git/
+.gitignore
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+tests/
+explanation.md
+en.subject.pdf
+.vscode/
+.idea/
+.impeccable/

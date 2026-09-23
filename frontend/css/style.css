@@ -1,0 +1,426 @@
+/* =========================================================================
+   Supercharge — feuille de style
+   -------------------------------------------------------------------------
+   Thème sombre par défaut, thème clair disponible via [data-theme="light"].
+   Les deux jeux de couleurs de séries sont VALIDÉS séparément (séparation
+   daltonienne, contraste sur le fond) — le thème clair n'est pas un simple
+   inversement du sombre, c'est un second jeu choisi pour son propre fond.
+   ========================================================================= */
+
+:root {
+  color-scheme: dark;
+
+  /* — Surfaces — */
+  --surface-0: #101012;
+  --surface-1: #1a1a19;
+  --surface-2: #222224;
+  --surface-3: #2b2b2e;
+  --border:    #37373b;
+  --border-strong: #4a4a50;
+
+  /* — Texte — */
+  --text-primary:   #ffffff;
+  --text-secondary: #c3c2b7;
+  --text-muted:     #8b8a82;
+
+  /* — Séries (palette catégorielle, ordre FIXE, jamais recyclé) — */
+  --series-1: #3987e5;  /* bleu    — espace de recherche 2^N        */
+  --series-2: #d95926;  /* orange  — force brute réelle             */
+  --series-3: #199e70;  /* aqua    — circuit QAOA sur QPU           */
+  --series-4: #c98500;  /* jaune   — simulation QAOA sur CPU        */
+
+  /* — Statut (réservé, jamais utilisé comme « série 5 ») — */
+  --good:     #199e70;
+  --warning:  #c98500;
+  --critical: #e66767;
+
+  /* — Carte — */
+  --map-covered:     #199e70;
+  --map-uncovered:   #b4afa2;
+  --map-station:     #3987e5;
+  --map-candidate:   #8b8a82;
+  --map-water:       #2c5f8a;
+  --map-blocked:     #5a5a52;
+
+  --radius: 10px;
+  --radius-sm: 6px;
+  --mono: ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", Consolas, monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --surface-0: #f4f4f1;
+  --surface-1: #fcfcfb;
+  --surface-2: #ffffff;
+  --surface-3: #f0efec;
+  --border:    #dedcd6;
+  --border-strong: #c3c2b7;
+  --text-primary:   #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted:     #7a7973;
+
+  --series-1: #2a78d6;
+  --series-2: #eb6834;
+  --series-3: #1baf7a;
+  --series-4: #eda100;
+
+  --good:     #1baf7a;
+  --warning:  #eda100;
+  --critical: #e34948;
+
+  --map-covered:   #1baf7a;
+  --map-uncovered: #8a877e;
+  --map-station:   #2a78d6;
+  --map-candidate: #7a7973;
+  --map-water:     #9ec5f4;
+  --map-blocked:   #c3c2b7;
+}
+
+/* ===================== Base ===================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Une regle de classe avec `display` ecrase le `display:none` que le
+   navigateur applique a [hidden]. Sans ce garde-fou, .skipnote (en
+   display:flex) reste visible meme masquee. */
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.5;
+  background: var(--surface-0);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-block: 20px 60px;
+  padding-inline: 20px;
+}
+
+h1, h2, h3 { margin: 0; font-weight: 600; line-height: 1.25; }
+h2 { font-size: 15px; letter-spacing: .02em; }
+h3 { font-size: 13px; color: var(--text-secondary); }
+
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+/* ===================== En-tête ===================== */
+
+header.top {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-bottom: 16px; margin-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.brand h1 { font-size: 21px; letter-spacing: -.01em; }
+.brand .spark { color: var(--series-1); }
+.brand .sub { font-size: 12.5px; color: var(--text-muted); }
+
+.top .grow { flex: 1 1 auto; }
+
+/* ===================== Contrôles ===================== */
+
+button, select {
+  font: inherit; color: var(--text-primary);
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 7px 12px; cursor: pointer;
+  transition: border-color .12s, background .12s;
+}
+button:hover:not(:disabled), select:hover { border-color: var(--border-strong); }
+button:disabled { opacity: .5; cursor: progress; }
+button:focus-visible, select:focus-visible, input:focus-visible {
+  outline: 2px solid var(--series-1); outline-offset: 2px;
+}
+
+button.primary {
+  background: var(--series-1); border-color: var(--series-1);
+  color: #fff; font-weight: 600; padding-inline: 18px;
+}
+button.primary:hover:not(:disabled) { filter: brightness(1.12); }
+
+button.ghost { background: transparent; }
+
+.card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.card + .card, .row + .row, .card + .row, .row + .card { margin-top: 14px; }
+
+.card > header {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 14px; flex-wrap: wrap;
+}
+.card > header .grow { flex: 1 1 auto; }
+
+/* ===================== Panneau de configuration ===================== */
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+  gap: 14px 22px;
+}
+
+.ctrl > label {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 8px; margin-bottom: 5px;
+  font-size: 12px; color: var(--text-secondary);
+}
+.ctrl > label .val {
+  font-family: var(--mono); font-size: 12.5px;
+  color: var(--text-primary); font-weight: 600;
+}
+
+input[type="range"] {
+  -webkit-appearance: none; appearance: none;
+  width: 100%; height: 3px; border-radius: 2px;
+  background: var(--surface-3); cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 15px; height: 15px; border-radius: 50%;
+  background: var(--series-1); border: 2px solid var(--surface-1); cursor: grab;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 15px; height: 15px; border-radius: 50%; border: 2px solid var(--surface-1);
+  background: var(--series-1); cursor: grab;
+}
+input[type="range"]:disabled { opacity: .4; }
+
+.checkline {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 12.5px; color: var(--text-secondary); cursor: pointer;
+}
+.checkline input { accent-color: var(--series-1); width: 15px; height: 15px; cursor: pointer; }
+
+.hint { font-size: 11.5px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+/* ===================== Verdict ===================== */
+
+.verdict {
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+}
+.verdict .label {
+  font-size: 10.5px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.verdict .headline {
+  font-size: 15.5px; font-weight: 600; margin-bottom: 8px; line-height: 1.45;
+}
+.verdict .detail { font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
+.verdict .annealing-note {
+  font-size: 12px; color: var(--text-muted); line-height: 1.55;
+  margin-top: 9px; padding-top: 9px; border-top: 1px solid var(--border);
+}
+
+/* ===================== Badges ===================== */
+
+.badges { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11.5px; padding: 4px 10px; border-radius: 99px;
+  border: 1px solid var(--border); background: var(--surface-2);
+  color: var(--text-secondary);
+}
+.badge .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; flex: none; }
+.badge.ok       { color: var(--good);     border-color: color-mix(in srgb, var(--good) 40%, transparent); }
+.badge.warn     { color: var(--warning);  border-color: color-mix(in srgb, var(--warning) 40%, transparent); }
+.badge.danger   { color: var(--critical); border-color: color-mix(in srgb, var(--critical) 45%, transparent); }
+.badge strong { color: var(--text-primary); font-family: var(--mono); }
+
+/* ===================== Cartes jumelles ===================== */
+
+.maps { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.mappane { display: flex; flex-direction: column; }
+.mappane > header {
+  display: flex; align-items: center; gap: 9px; margin-bottom: 10px; flex-wrap: wrap;
+}
+.mappane .tag {
+  font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 4px;
+}
+.tag.classical { background: color-mix(in srgb, var(--series-2) 18%, transparent); color: var(--series-2); }
+.tag.quantum   { background: color-mix(in srgb, var(--series-1) 18%, transparent); color: var(--series-1); }
+
+.map {
+  height: 430px; border-radius: var(--radius-sm);
+  border: 1px solid var(--border); background: var(--surface-2);
+  z-index: 0;
+}
+
+.mapstats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+  margin-top: 10px; background: var(--border);
+  border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden;
+}
+.mapstats div { background: var(--surface-1); padding: 9px 10px; }
+.mapstats .k { font-size: 10.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .05em; }
+.mapstats .v { font-family: var(--mono); font-size: 16px; font-weight: 600; margin-top: 1px; }
+
+.skipnote {
+  height: 430px; display: flex; align-items: center; justify-content: center;
+  padding: 30px; text-align: center; font-size: 13px; line-height: 1.65;
+  color: var(--text-secondary); border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-sm); background: var(--surface-2);
+}
+.skipnote b { color: var(--warning); }
+
+.station-list { font-size: 12px; color: var(--text-secondary); margin-top: 9px; line-height: 1.7; }
+.station-list .chip {
+  display: inline-block; padding: 2px 8px; margin-right: 5px; border-radius: 4px;
+  background: var(--surface-3); font-size: 11.5px;
+}
+.station-list .chip.uniq { outline: 1.5px dashed var(--series-4); outline-offset: 1px; }
+
+/* ===================== Légende de carte ===================== */
+
+.maplegend {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  font-size: 11.5px; color: var(--text-muted); margin-top: 10px;
+}
+.maplegend span { display: inline-flex; align-items: center; gap: 6px; }
+.maplegend i {
+  width: 11px; height: 11px; border-radius: 50%; display: inline-block; flex: none;
+}
+
+/* ===================== Tableau de métriques ===================== */
+
+table.metrics { width: 100%; border-collapse: collapse; font-size: 13px; }
+table.metrics th, table.metrics td {
+  text-align: right; padding: 9px 12px; border-bottom: 1px solid var(--border);
+}
+table.metrics th:first-child, table.metrics td:first-child { text-align: left; }
+table.metrics thead th {
+  font-size: 11px; text-transform: uppercase; letter-spacing: .05em;
+  color: var(--text-muted); font-weight: 600;
+}
+table.metrics tbody td { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+table.metrics tbody td:first-child { font-family: var(--sans); color: var(--text-secondary); }
+table.metrics tbody tr:hover { background: var(--surface-2); }
+table.metrics .best { color: var(--good); font-weight: 600; }
+table.metrics .help {
+  display: block; font-family: var(--sans); font-size: 11px;
+  color: var(--text-muted); font-weight: 400; margin-top: 2px; max-width: 46ch;
+}
+.tablewrap { overflow-x: auto; }
+
+/* ===================== Graphiques ===================== */
+
+.charts { display: grid; grid-template-columns: 1.35fr 1fr; gap: 14px; }
+.chartbox { position: relative; height: 330px; }
+.chartbox canvas { max-width: 100%; }
+
+.chartnote {
+  font-size: 11.5px; color: var(--text-muted);
+  line-height: 1.55; margin-top: 10px;
+}
+
+/* ===================== Démo de mise à l'échelle ===================== */
+
+.scalegrid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  overflow: hidden; margin-top: 14px;
+}
+.scalegrid div { background: var(--surface-1); padding: 12px 14px; }
+.scalegrid .k {
+  font-size: 10.5px; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: .05em;
+}
+.scalegrid .v { font-family: var(--mono); font-size: 18px; font-weight: 600; margin-top: 3px; }
+.scalegrid .v.alarm { color: var(--critical); }
+.scalegrid .v.calm  { color: var(--good); }
+
+/* ===================== États ===================== */
+
+.busy { position: relative; }
+.busy::after {
+  content: ""; position: absolute; inset: 0; border-radius: var(--radius);
+  background: color-mix(in srgb, var(--surface-0) 55%, transparent);
+  backdrop-filter: blur(1px);
+}
+
+#status {
+  font-size: 12px; color: var(--text-muted);
+  display: inline-flex; align-items: center; gap: 8px;
+}
+#status .spin {
+  width: 11px; height: 11px; border-radius: 50%; flex: none;
+  border: 2px solid var(--border-strong); border-top-color: var(--series-1);
+  animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.errorbox {
+  background: color-mix(in srgb, var(--critical) 10%, var(--surface-1));
+  border: 1px solid color-mix(in srgb, var(--critical) 45%, transparent);
+  border-radius: var(--radius); padding: 14px 16px; font-size: 13px;
+}
+.errorbox b { color: var(--critical); }
+
+/* ===================== Responsive ===================== */
+
+@media (max-width: 1050px) {
+  .maps, .charts { grid-template-columns: 1fr; }
+  .map { height: 340px; }
+}
+@media (max-width: 620px) {
+  .wrap { padding-inline: 14px; }
+  .mapstats { grid-template-columns: repeat(2, 1fr); }
+  .brand h1 { font-size: 18px; }
+}
+
+/* Leaflet : neutraliser le fond blanc par défaut en thème sombre */
+.leaflet-container { background: #0b0b0d; font-family: var(--sans); }
+[data-theme="light"] .leaflet-container { background: #eeece7; }
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: var(--surface-2); color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+.leaflet-popup-content { margin: 10px 12px; font-size: 12.5px; }
+.leaflet-popup-content b { font-size: 13px; }
+.leaflet-control-attribution {
+  background: color-mix(in srgb, var(--surface-1) 85%, transparent) !important;
+  color: var(--text-muted) !important;
+}
+.leaflet-control-attribution a { color: var(--text-secondary) !important; }
+/* Le fond de carte est atténué pour que la DONNÉE ressorte : un fond de
+   carte doit reculer. `opacity` est composée par le GPU, contrairement à
+   `filter` qui force une rastérisation logicielle (mesurée à plus de 30 s
+   sur deux cartes : voir maps.js). */
+.leaflet-tile-pane { opacity: .30; }
+[data-theme="light"] .leaflet-tile-pane { opacity: .80; }
+
+/* Pas de filter() sur le pane de tuiles : un filtre CSS sur une surface de
+   cette taille force une rastérisation logicielle et gèle le rendu pendant
+   plusieurs secondes. Le thème sombre est obtenu par un VRAI fond de carte
+   sombre (voir maps.js), pas par une inversion de couleurs. */
+
+/* Pastille de station sur la carte */
+.station-pin {
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--mono); font-size: 11px; font-weight: 700;
+  color: #fff; background: var(--map-station);
+  border: 2px solid var(--surface-1); border-radius: 50%;
+  width: 24px; height: 24px; box-shadow: 0 1px 6px rgb(0 0 0 / .45);
+}
+.station-pin.unique { border-color: var(--series-4); border-width: 3px; }
+.candidate-pin {
+  width: 11px; height: 11px; border-radius: 50%;
+  background: transparent; border: 2px dashed var(--map-candidate);
+}

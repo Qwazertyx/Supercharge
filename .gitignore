@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Sujet (non redistribué)
+en.subject.pdf
+
+# Cache de l'outillage de revue de design
+.impeccable/

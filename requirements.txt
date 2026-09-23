@@ -1,0 +1,22 @@
+# Supercharge — dépendances d'exécution.
+#
+# Versions épinglées par plage mineure : une image reconstruite dans six mois
+# doit se comporter comme celle d'aujourd'hui, sans figer les correctifs de
+# sécurité. Les versions exactes vérifiées sont indiquées en commentaire.
+#
+# Aucune dépendance ne requiert de clé d'API, de compte, ni de service payant.
+
+# --- Web -------------------------------------------------------------------
+fastapi~=0.141.0          # vérifié : 0.141.1
+uvicorn[standard]~=0.53.0 # vérifié : 0.53.0
+pydantic~=2.13            # vérifié : 2.13.5  (validation des paramètres)
+
+# --- Calcul ----------------------------------------------------------------
+numpy~=2.4                # vérifié : 2.4.4
+scipy~=1.17               # vérifié : 1.17.1  (COBYLA, boucle variationnelle)
+
+# --- Quantique -------------------------------------------------------------
+# Qiskit 2.x est requis : la branche 1.x dépend de symengine, qui n'a pas de
+# roue précompilée pour les Python récents et échoue à la compilation.
+qiskit~=2.4               # vérifié : 2.4.0   (construction du circuit)
+qiskit-aer~=0.17.0        # vérifié : 0.17.2  (simulation + modèle de bruit)

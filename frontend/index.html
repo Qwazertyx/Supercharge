@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supercharge — Lyon</title>
+<meta name="description" content="Placement optimal de bornes de recharge sur la Presqu'île de Lyon : force brute exacte contre QAOA quantique.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='13'>⚡</text></svg>">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand">
+      <h1><span class="spark">⚡</span> Supercharge</h1>
+      <span class="sub" id="area-name">Chargement…</span>
+    </div>
+    <div class="grow"></div>
+    <span id="status"></span>
+    <button class="ghost" id="theme-toggle" title="Basculer le thème" aria-label="Basculer le thème">◐</button>
+    <button class="primary" id="solve-btn">Résoudre</button>
+  </header>
+
+  <div id="error-slot"></div>
+
+  <!-- ================= CONFIGURATION ================= -->
+  <section class="card">
+    <header>
+      <h2>Configuration du problème</h2>
+      <div class="grow"></div>
+      <button class="ghost" id="reset-btn" title="Revenir à l'instance de référence documentée">
+        Réinitialiser l'instance de référence
+      </button>
+    </header>
+
+    <div class="controls">
+      <div class="ctrl">
+        <label for="budget">Budget <span class="sub">B</span> <span class="val" id="budget-val">3</span></label>
+        <input type="range" id="budget" min="1" max="9" step="1" value="3">
+        <p class="hint">Nombre maximum de bornes constructibles.</p>
+      </div>
+
+      <div class="ctrl">
+        <label for="radius">Rayon de couverture <span class="sub">r</span> <span class="val" id="radius-val">300 m</span></label>
+        <input type="range" id="radius" min="100" max="900" step="25" value="300">
+        <p class="hint">Une borne couvre toute zone à moins de <span class="num" id="radius-echo">300</span> m.</p>
+      </div>
+
+      <div class="ctrl">
+        <label for="ncand">Candidats <span class="sub">N</span> <span class="val" id="ncand-val">9</span></label>
+        <input type="range" id="ncand" min="2" max="9" step="1" value="9">
+        <p class="hint"><span class="num" id="combo-echo">130</span> combinaisons à énumérer.</p>
+      </div>
+
+      <div class="ctrl">
+        <label for="weight-mode">Poids des zones</label>
+        <select id="weight-mode">
+          <option value="uniform">Uniforme : chaque zone compte pareil</option>
+          <option value="density">Densité : priorité aux pôles d'activité</option>
+        </select>
+        <p class="hint">Le sujet impose « uniforme » par défaut.</p>
+      </div>
+
+      <div class="ctrl">
+        <label for="penalty">Pénalité <span class="sub">P</span> <span class="val" id="penalty-val">auto</span></label>
+        <input type="range" id="penalty" min="-1" max="4" step="0.1" value="0.04" disabled>
+        <label class="checkline" style="margin-top:7px">
+          <input type="checkbox" id="penalty-auto" checked> Calcul automatique
+        </label>
+        <p class="hint" id="penalty-hint">Décochez pour démontrer en direct l'effet d'un&nbsp;P mal choisi.</p>
+      </div>
+
+      <div class="ctrl">
+        <label for="layers">Couches QAOA <span class="sub">p</span> <span class="val" id="layers-val">3</span></label>
+        <input type="range" id="layers" min="1" max="8" step="1" value="3">
+        <p class="hint">Plus de couches = plus expressif, mais plus long à simuler.</p>
+      </div>
+
+      <div class="ctrl">
+        <label class="checkline"><input type="checkbox" id="inaccessible" checked>
+          Retirer les zones inaccessibles</label>
+        <p class="hint">Le Rhône, la Saône et l'emprise ferroviaire de Perrache : personne n'y habite.</p>
+        <label class="checkline" style="margin-top:10px"><input type="checkbox" id="annealing" checked>
+          Recuit simulé <span class="sub">(bonus)</span></label>
+      </div>
+
+      <div class="ctrl">
+        <label class="checkline"><input type="checkbox" id="noise">
+          Bruit quantique <span class="sub">(bonus)</span></label>
+        <p class="hint">Simule un vrai processeur : erreurs de portes et de lecture.
+          Beaucoup plus lent (~45 s), car l'énergie doit alors être estimée par
+          échantillonnage, comme sur du vrai matériel. Regardez la qualité de la
+          distribution sous la carte QAOA, pas le placement retenu.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VERDICT ================= -->
+  <div class="verdict" id="verdict" hidden>
+    <div class="label">Verdict</div>
+    <div class="headline" id="verdict-headline"></div>
+    <div class="detail" id="verdict-detail"></div>
+    <div class="annealing-note" id="verdict-annealing" hidden></div>
+  </div>
+
+  <!-- ================= DIAGNOSTIC DU QUBO ================= -->
+  <section class="card">
+    <header><h2>Diagnostic du QUBO</h2></header>
+    <div class="badges" id="qubo-badges"></div>
+    <p class="hint" id="qubo-message" style="margin-top:11px"></p>
+  </section>
+
+  <!-- ================= CARTES ================= -->
+  <div class="maps">
+    <section class="card mappane">
+      <header>
+        <span class="tag classical">Classique</span>
+        <h2>Force brute — exacte</h2>
+      </header>
+      <div class="map" id="map-classical"></div>
+      <div class="mapstats" id="stats-classical"></div>
+      <div class="station-list" id="list-classical"></div>
+    </section>
+
+    <section class="card mappane">
+      <header>
+        <span class="tag quantum">Quantique</span>
+        <h2>QAOA — approché</h2>
+      </header>
+      <div class="map" id="map-quantum"></div>
+      <div id="skip-quantum" class="skipnote" hidden></div>
+      <div class="mapstats" id="stats-quantum"></div>
+      <div class="station-list" id="list-quantum"></div>
+    </section>
+  </div>
+
+  <div class="maplegend">
+    <span><i style="background:var(--map-covered)"></i> zone couverte</span>
+    <span><i style="background:var(--map-uncovered)"></i> zone non couverte</span>
+    <span><i style="background:var(--map-station)"></i> borne retenue</span>
+    <span><i style="background:transparent;border:2px dashed var(--map-candidate)"></i> candidat non retenu</span>
+    <span><i style="background:transparent;border:2px solid var(--series-4)"></i> choisi par ce solveur seulement</span>
+    <span><i style="background:var(--map-water)"></i> zone inaccessible</span>
+  </div>
+
+  <!-- ================= MÉTRIQUES ================= -->
+  <section class="card">
+    <header>
+      <h2>Comparaison chiffrée</h2>
+      <div class="grow"></div>
+      <span class="badge" id="agreement-badge" hidden></span>
+    </header>
+    <div class="tablewrap">
+      <table class="metrics">
+        <thead>
+          <tr>
+            <th>Métrique</th>
+            <th>Classique</th>
+            <th>QAOA</th>
+            <th id="th-annealing">Recuit</th>
+            <th>Δ (QAOA − classique)</th>
+          </tr>
+        </thead>
+        <tbody id="metrics-body"></tbody>
+      </table>
+    </div>
+    <p class="hint" id="agreement-detail" style="margin-top:12px"></p>
+  </section>
+
+  <!-- ================= GRAPHIQUES ================= -->
+  <div class="charts">
+    <section class="card">
+      <header>
+        <h2>Croissance de la complexité</h2>
+        <div class="grow"></div>
+        <label class="checkline"><input type="checkbox" id="budget-scales"> B = N/2</label>
+      </header>
+      <div class="chartbox"><canvas id="chart-complexity"></canvas></div>
+      <p class="chartnote">
+        Échelle logarithmique. L'axe vertical est le <b>travail</b> (nombre d'opérations,
+        proportionnel au temps), et non la mémoire : la force brute parcourt l'espace une
+        combinaison à la fois. Sur une échelle log, une exponentielle devient une droite.
+        <br><br>
+        Remarquez que <b>ma simulation</b> est la <b>pire des quatre</b> : je paie le coût
+        exponentiel que le quantique est censé éviter. La courbe qui porte l'argument est
+        celle du <b>circuit sur un vrai QPU</b>, en O(p·N²).
+      </p>
+    </section>
+
+    <section class="card">
+      <header>
+        <h2>Convergence de la boucle variationnelle</h2>
+      </header>
+      <div class="chartbox"><canvas id="chart-convergence"></canvas></div>
+      <p class="chartnote">
+        L'énergie moyenne ⟨H_C⟩ que l'optimiseur classique cherche à minimiser, itération
+        après itération. Les sauts correspondent aux redémarrages. La ligne horizontale
+        marque l'énergie de l'optimum, connue grâce à la force brute : on voit l'écart se
+        refermer.
+      </p>
+    </section>
+  </div>
+
+  <!-- ================= AMPLITUDES ================= -->
+  <section class="card" id="amplitudes-card" hidden>
+    <header><h2>Concentration des amplitudes — l'interférence rendue visible</h2></header>
+    <div class="chartbox" style="height:280px"><canvas id="chart-amplitudes"></canvas></div>
+    <p class="chartnote">
+      Probabilité de mesure des états les plus probables, une fois les angles optimisés.
+      La ligne horizontale marque le point de départ : juste après les portes de Hadamard,
+      les 2<sup>N</sup> états sont <b>tous équiprobables</b>, à 1/2<sup>N</sup>.
+      Tout ce qui dépasse cette ligne a été produit par l'<b>interférence constructive</b> :
+      les phases accumulées par le layer de coût se sont additionnées pour les états de
+      basse énergie et compensées pour les autres.
+      <b>C'est le mécanisme quantique en une image.</b>
+    </p>
+  </section>
+
+  <!-- ================= SCALING DEMO ================= -->
+  <section class="card">
+    <header>
+      <h2>Démonstration de l'explosion combinatoire <span class="sub">(bonus)</span></h2>
+    </header>
+    <div class="ctrl" style="max-width:460px">
+      <label for="scale-n">Nombre de candidats <span class="sub">N</span>
+        <span class="val" id="scale-n-val">9</span></label>
+      <input type="range" id="scale-n" min="2" max="80" step="1" value="9">
+    </div>
+    <div class="scalegrid" id="scale-grid"></div>
+    <p class="chartnote">
+      Chaque candidat ajouté <b>double</b> l'espace de recherche. Pas « +10 % » : <b>×2</b>.
+      Acheter une machine mille fois plus rapide ne vous fait gagner que <b>dix
+      candidats</b>. C'est pour cette raison que la force brute n'est pas une option pour
+      une vraie étude de déploiement, qui examinerait des centaines d'emplacements.
+    </p>
+  </section>
+
+</div>
+
+<script src="vendor/leaflet.js"></script>
+<script src="vendor/chart.umd.js"></script>
+<script src="js/api.js"></script>
+<script src="js/maps.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/panels.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

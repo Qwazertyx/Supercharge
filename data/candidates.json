@@ -1,0 +1,214 @@
+{
+  "area": {
+    "name": "Lyon — Presqu'île et ses rives",
+    "city": "Lyon, France",
+    "bbox": {
+      "lat_min": 45.746,
+      "lat_max": 45.772,
+      "lon_min": 4.822,
+      "lon_max": 4.848
+    },
+    "center": {
+      "lat": 45.759,
+      "lon": 4.835
+    },
+    "default_zoom": 14
+  },
+  "defaults": {
+    "budget": 3,
+    "radius_m": 300,
+    "weight_mode": "uniform",
+    "respect_inaccessible": true,
+    "n_candidates": 9
+  },
+  "candidates": [
+    {
+      "id": 0,
+      "name": "Place Bellecour",
+      "lat": 45.7578,
+      "lon": 4.8321
+    },
+    {
+      "id": 1,
+      "name": "Place des Terreaux",
+      "lat": 45.7674,
+      "lon": 4.8336
+    },
+    {
+      "id": 2,
+      "name": "Place des Cordeliers",
+      "lat": 45.7639,
+      "lon": 4.8362
+    },
+    {
+      "id": 3,
+      "name": "Gare de Perrache",
+      "lat": 45.7496,
+      "lon": 4.8262
+    },
+    {
+      "id": 4,
+      "name": "Place des Jacobins",
+      "lat": 45.7615,
+      "lon": 4.8339
+    },
+    {
+      "id": 5,
+      "name": "Place Gabriel Péri",
+      "lat": 45.7541,
+      "lon": 4.8431
+    },
+    {
+      "id": 6,
+      "name": "Vieux Lyon — Saint-Jean",
+      "lat": 45.7609,
+      "lon": 4.8274
+    },
+    {
+      "id": 7,
+      "name": "Place Sathonay",
+      "lat": 45.7692,
+      "lon": 4.8318
+    },
+    {
+      "id": 8,
+      "name": "Quai Victor Augagneur",
+      "lat": 45.7572,
+      "lon": 4.8418
+    },
+    {
+      "id": 9,
+      "name": "Place Ampère",
+      "lat": 45.754,
+      "lon": 4.83
+    },
+    {
+      "id": 10,
+      "name": "Place Carnot",
+      "lat": 45.7513,
+      "lon": 4.8272
+    },
+    {
+      "id": 11,
+      "name": "Place des Célestins",
+      "lat": 45.7592,
+      "lon": 4.8305
+    },
+    {
+      "id": 12,
+      "name": "Place Saint-Nizier",
+      "lat": 45.7627,
+      "lon": 4.8335
+    },
+    {
+      "id": 13,
+      "name": "Place Louis Pradel",
+      "lat": 45.7682,
+      "lon": 4.8365
+    },
+    {
+      "id": 14,
+      "name": "Quai Saint-Antoine",
+      "lat": 45.7625,
+      "lon": 4.8295
+    },
+    {
+      "id": 15,
+      "name": "Place Antonin Poncet",
+      "lat": 45.7566,
+      "lon": 4.8345
+    },
+    {
+      "id": 16,
+      "name": "Place Raspail",
+      "lat": 45.7495,
+      "lon": 4.8395
+    },
+    {
+      "id": 17,
+      "name": "Place du Pont",
+      "lat": 45.7563,
+      "lon": 4.8425
+    },
+    {
+      "id": 18,
+      "name": "Montée de la Grande-Côte",
+      "lat": 45.771,
+      "lon": 4.8305
+    },
+    {
+      "id": 19,
+      "name": "Quai Sarrail",
+      "lat": 45.7645,
+      "lon": 4.8425
+    }
+  ],
+  "demand_poles": [
+    {
+      "name": "Bellecour",
+      "lat": 45.7578,
+      "lon": 4.8321,
+      "intensity": 1.0
+    },
+    {
+      "name": "Hôtel de Ville",
+      "lat": 45.7676,
+      "lon": 4.8345,
+      "intensity": 0.95
+    },
+    {
+      "name": "Cordeliers",
+      "lat": 45.7639,
+      "lon": 4.8362,
+      "intensity": 0.9
+    },
+    {
+      "name": "Perrache",
+      "lat": 45.7496,
+      "lon": 4.8262,
+      "intensity": 0.85
+    },
+    {
+      "name": "Guillotière",
+      "lat": 45.7541,
+      "lon": 4.8431,
+      "intensity": 0.8
+    },
+    {
+      "name": "Jacobins",
+      "lat": 45.7615,
+      "lon": 4.8339,
+      "intensity": 0.75
+    },
+    {
+      "name": "Vieux Lyon",
+      "lat": 45.7609,
+      "lon": 4.8274,
+      "intensity": 0.7
+    },
+    {
+      "name": "Opéra / République",
+      "lat": 45.768,
+      "lon": 4.8375,
+      "intensity": 0.7
+    },
+    {
+      "name": "Ainay",
+      "lat": 45.754,
+      "lon": 4.8295,
+      "intensity": 0.6
+    },
+    {
+      "name": "Sathonay",
+      "lat": 45.7692,
+      "lon": 4.8318,
+      "intensity": 0.55
+    },
+    {
+      "name": "Quais du Rhône",
+      "lat": 45.759,
+      "lon": 4.8415,
+      "intensity": 0.5
+    }
+  ]
+}
