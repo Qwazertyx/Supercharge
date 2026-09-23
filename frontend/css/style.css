@@ -296,6 +296,12 @@ input[type="range"]:disabled { opacity: .4; }
 .maplegend i {
   width: 11px; height: 11px; border-radius: 50%; display: inline-block; flex: none;
 }
+/* La légende doit porter la MÊME distinction de forme que la carte, sinon
+   elle n'apprend pas la règle : cercle = zone, losange = candidat. */
+.maplegend i.lozenge {
+  width: 10px; height: 10px; border-radius: 2px; transform: rotate(45deg);
+  margin: 0 1px;
+}
 
 /* ===================== Tableau de métriques ===================== */
 
@@ -412,15 +418,53 @@ table.metrics .help {
    sombre (voir maps.js), pas par une inversion de couleurs. */
 
 /* Pastille de station sur la carte */
+/* Candidats et zones doivent se distinguer AU PREMIER COUP D'OEIL.
+
+   Sur cette carte, la couleur est déjà saturée d'information : vert = zone
+   couverte, gris = non couverte, jaune = divergence entre solveurs, bleu =
+   borne retenue. Ajouter une teinte de plus n'aurait rien clarifié.
+
+   On encode donc la NATURE de l'objet sur le seul canal resté libre, la
+   FORME :
+
+       losange = un emplacement où l'on PEUT construire  (candidat)
+       cercle  = une zone de demande à couvrir
+
+   La règle est absolue — tout candidat est un losange, retenu ou non — donc
+   elle s'apprend en une seconde. Elle survit aussi au daltonisme et au thème
+   clair, là où un simple écart de teinte aurait échoué.
+
+   Le losange est un carré pivoté de 45°. Le libellé interne est pivoté de
+   −45° pour rester lisible à l'horizontale. La rotation se fait autour du
+   centre, donc l'ancrage Leaflet reste le centre de la boîte (voir maps.js). */
+
 .station-pin {
   display: flex; align-items: center; justify-content: center;
   font-family: var(--mono); font-size: 11px; font-weight: 700;
   color: #fff; background: var(--map-station);
-  border: 2px solid var(--surface-1); border-radius: 50%;
+  border: 2px solid var(--surface-1); border-radius: 3px;
   width: 24px; height: 24px; box-shadow: 0 1px 6px rgb(0 0 0 / .45);
+  transform: rotate(45deg);
 }
+.station-pin > span { transform: rotate(-45deg); line-height: 1; }
 .station-pin.unique { border-color: var(--series-4); border-width: 3px; }
+
+/* Non retenu : même famille (losange), mais état inactif — donc un gris
+   désaturé, jamais une couleur pleine, conformément au registre « product ».
+
+   Le remplissage est le gris LUI-MÊME, et non la couleur de surface. C'est
+   délibéré : le pane de tuiles est réduit à 30 % d'opacité en thème sombre
+   au-dessus d'un conteneur presque noir, si bien que le champ de carte tourne
+   autour de #4d4c48. Un losange rempli de `--surface-1` (#1a1a19) s'y serait
+   noyé. Un gris moyen plein tranche au contraire sur les deux thèmes, et
+   l'anneau couleur de surface le décolle du fond.
+
+   Un contour transparent — la version précédente — disparaissait purement et
+   simplement dès que les tuiles étaient chargées. */
 .candidate-pin {
-  width: 11px; height: 11px; border-radius: 50%;
-  background: transparent; border: 2px dashed var(--map-candidate);
+  width: 13px; height: 13px; border-radius: 2px;
+  background: var(--map-candidate);
+  border: 1.5px solid var(--surface-1);
+  box-shadow: 0 0 0 1px rgb(0 0 0 / .35);
+  transform: rotate(45deg);
 }

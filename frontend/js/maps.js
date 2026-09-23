@@ -105,7 +105,11 @@ const MapPane = (() => {
       }
     }
 
-    /* Candidats : pastille numérotée si retenu, cercle pointillé sinon. */
+    /* Candidats : losange numéroté si retenu, petit losange creux sinon.
+
+       Le losange n'est pas décoratif — c'est lui qui sépare « emplacement
+       constructible » de « zone de demande », qui reste un cercle. Voir le
+       bloc .candidate-pin dans style.css pour le raisonnement. */
     drawCandidates(candidates, selection, uniqueStations, radiusM) {
       this.candidateLayer.clearLayers();
       this.radiusLayer.clearLayers();
@@ -135,13 +139,13 @@ const MapPane = (() => {
         const icon = isChosen
           ? L.divIcon({
               className: '',
-              html: `<div class="station-pin${isUnique ? ' unique' : ''}">${cand.id}</div>`,
+              html: `<div class="station-pin${isUnique ? ' unique' : ''}"><span>${cand.id}</span></div>`,
               iconSize: [24, 24], iconAnchor: [12, 12],
             })
           : L.divIcon({
               className: '',
               html: '<div class="candidate-pin"></div>',
-              iconSize: [11, 11], iconAnchor: [5.5, 5.5],
+              iconSize: [13, 13], iconAnchor: [6.5, 6.5],
             });
 
         L.marker([cand.lat, cand.lon], { icon, title: cand.name })
