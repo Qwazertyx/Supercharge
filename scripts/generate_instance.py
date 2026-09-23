@@ -49,15 +49,23 @@ BBOX = {
 # voir explanation.md §11 piège P8.
 
 CANDIDATES = [
-    {"id": 0, "name": "Place Bellecour",        "lat": 45.7578, "lon": 4.8321},
-    {"id": 1, "name": "Place des Terreaux",     "lat": 45.7674, "lon": 4.8336},
-    {"id": 2, "name": "Place des Cordeliers",   "lat": 45.7639, "lon": 4.8362},
-    {"id": 3, "name": "Gare de Perrache",       "lat": 45.7496, "lon": 4.8262},
-    {"id": 4, "name": "Place des Jacobins",     "lat": 45.7615, "lon": 4.8339},
-    {"id": 5, "name": "Place Gabriel Péri",     "lat": 45.7541, "lon": 4.8431},
-    {"id": 6, "name": "Vieux Lyon — Saint-Jean", "lat": 45.7609, "lon": 4.8274},
-    {"id": 7, "name": "Place Sathonay",         "lat": 45.7692, "lon": 4.8318},
-    {"id": 8, "name": "Quai Victor Augagneur",  "lat": 45.7572, "lon": 4.8418},
+    # --- INSTANCE DE RÉFÉRENCE (N = 9) ------------------------------------
+    # Trois candidats par rive. Ce n'est pas un détail cosmétique : avec des
+    # candidats massés sur la Presqu'île, un budget de 3 bornes n'avait plus
+    # de choix géographique réel à faire, et la carte donnait l'impression que
+    # les deux rives n'existaient pas. La demande, elle, est répartie
+    # 30 % / 46 % / 24 % entre rive droite, Presqu'île et rive gauche.
+    #
+    # Toutes les coordonnées sont relevées sur OpenStreetMap.
+    {"id": 0, "name": "Place Bellecour",          "lat": 45.7577, "lon": 4.8320},
+    {"id": 1, "name": "Place des Terreaux",       "lat": 45.7674, "lon": 4.8336},
+    {"id": 2, "name": "Place Beauregard",         "lat": 45.7578, "lon": 4.8233},
+    {"id": 3, "name": "Gare de Perrache",         "lat": 45.7496, "lon": 4.8262},
+    {"id": 4, "name": "Place Saint-Paul",         "lat": 45.7660, "lon": 4.8274},
+    {"id": 5, "name": "Place Gabriel Péri",       "lat": 45.7558, "lon": 4.8434},
+    {"id": 6, "name": "Vieux Lyon — Saint-Jean",  "lat": 45.7605, "lon": 4.8271},
+    {"id": 7, "name": "Place Maréchal Lyautey",   "lat": 45.7689, "lon": 4.8411},
+    {"id": 8, "name": "Quai Victor Augagneur",    "lat": 45.7624, "lon": 4.8413},
     # --- Au-delà de l'instance de référence -------------------------------
     # Les neuf premiers candidats constituent l'INSTANCE DE RÉFÉRENCE
     # documentée (N = 9). Les suivants ne servent que lorsque l'utilisateur
@@ -65,17 +73,17 @@ CANDIDATES = [
     # combinatoire sur de vraies données, et surtout d'atteindre le plafond
     # du simulateur pour voir la dégradation gracieuse de QAOA (sujet §VII.4).
     # Ce sont eux aussi de vrais lieux lyonnais.
-    {"id": 9,  "name": "Place Ampère",            "lat": 45.7540, "lon": 4.8300},
-    {"id": 10, "name": "Place Carnot",            "lat": 45.7513, "lon": 4.8272},
-    {"id": 11, "name": "Place des Célestins",     "lat": 45.7592, "lon": 4.8305},
-    {"id": 12, "name": "Place Saint-Nizier",      "lat": 45.7627, "lon": 4.8335},
-    {"id": 13, "name": "Place Louis Pradel",      "lat": 45.7682, "lon": 4.8365},
-    {"id": 14, "name": "Quai Saint-Antoine",      "lat": 45.7625, "lon": 4.8295},
-    {"id": 15, "name": "Place Antonin Poncet",    "lat": 45.7566, "lon": 4.8345},
-    {"id": 16, "name": "Place Raspail",           "lat": 45.7495, "lon": 4.8395},
-    {"id": 17, "name": "Place du Pont",           "lat": 45.7563, "lon": 4.8425},
-    {"id": 18, "name": "Montée de la Grande-Côte","lat": 45.7710, "lon": 4.8305},
-    {"id": 19, "name": "Quai Sarrail",            "lat": 45.7645, "lon": 4.8425},
+    {"id": 9,  "name": "Place des Cordeliers",    "lat": 45.7639, "lon": 4.8362},
+    {"id": 10, "name": "Place des Jacobins",      "lat": 45.7615, "lon": 4.8339},
+    {"id": 11, "name": "Place Sathonay",          "lat": 45.7690, "lon": 4.8320},
+    {"id": 12, "name": "Place des Célestins",     "lat": 45.7598, "lon": 4.8318},
+    {"id": 13, "name": "Place Saint-Nizier",      "lat": 45.7647, "lon": 4.8331},
+    {"id": 14, "name": "Place Louis Pradel",      "lat": 45.7684, "lon": 4.8367},
+    {"id": 15, "name": "Place Antonin Jutard",    "lat": 45.7566, "lon": 4.8409},
+    {"id": 16, "name": "Place Guichard",          "lat": 45.7588, "lon": 4.8465},
+    {"id": 17, "name": "Quai Général Sarrail",    "lat": 45.7640, "lon": 4.8414},
+    {"id": 18, "name": "Place du Change",         "lat": 45.7645, "lon": 4.8283},
+    {"id": 19, "name": "Place Raspail",           "lat": 45.7558, "lon": 4.8404},
 ]
 
 # --------------------------------------------------------------------------
@@ -117,22 +125,53 @@ WEIGHT_THRESHOLD = 0.20  # en dessous, la demande est trop diffuse pour une infr
 #
 # Les fleuves sont décrits par leur axe, puis épaissis en polygone.
 
-SAONE_CENTERLINE = [
-    (45.7720, 4.8296), (45.7690, 4.8290), (45.7660, 4.8278),
-    (45.7630, 4.8263), (45.7600, 4.8251), (45.7570, 4.8241),
-    (45.7540, 4.8235), (45.7500, 4.8233), (45.7460, 4.8236),
-]
-SAONE_WIDTH_M = 120.0
+# Les emprises du Rhône et de la Saône sont les POLYGONES RÉELS, relevés sur
+# OpenStreetMap (relations 7317123 « La Saône » et 660056 « Le Rhône »), puis
+# découpés sur la zone d'étude et simplifiés par Douglas-Peucker à ~9 m près.
+#
+# Ils sont figés ici sous forme de littéraux : le script reste hors-ligne et
+# déterministe, et le dépôt n'acquiert aucune dépendance réseau.
+#
+# Pourquoi ne pas garder un axe épaissi à largeur constante, comme avant ? Parce
+# qu'un ruban droit ne peut pas représenter le coude de la Saône, qui s'écarte
+# vers l'ouest en descendant sur Perrache puis quitte la zone au nord de
+# Saint-Paul. L'ancienne approximation plaçait la Saône jusqu'à 350 m de sa
+# position réelle, et le Rhône 180 m trop à l'ouest.
+#
+# Simplifier ne change rien au problème : on a vérifié que les 129 cellules de
+# la grille reçoivent exactement le même classement accessible / inaccessible
+# avec le polygone complet (1300 points) et avec sa version simplifiée.
 
-RHONE_CENTERLINE = [
-    (45.7720, 4.8424), (45.7690, 4.8415), (45.7660, 4.8406),
-    (45.7630, 4.8398), (45.7600, 4.8392), (45.7570, 4.8388),
-    (45.7540, 4.8384), (45.7500, 4.8378), (45.7460, 4.8372),
+SAONE_POLYGON = [
+    (45.76756, 4.81956), (45.76812, 4.82265), (45.76831, 4.82525),
+    (45.76822, 4.82660), (45.76789, 4.82783), (45.76678, 4.82982),
+    (45.76561, 4.83092), (45.76512, 4.83122), (45.76314, 4.83133),
+    (45.76231, 4.83122), (45.76071, 4.83062), (45.75905, 4.82918),
+    (45.75632, 4.82620), (45.75458, 4.82544), (45.75302, 4.82456),
+    (45.75139, 4.82303), (45.75131, 4.82320), (45.74880, 4.81950),
+    (45.75039, 4.81950), (45.75148, 4.82170), (45.75326, 4.82340),
+    (45.75600, 4.82464), (45.75698, 4.82541), (45.75949, 4.82793),
+    (45.76054, 4.82854), (45.76057, 4.82871), (45.76219, 4.82944),
+    (45.76349, 4.82966), (45.76530, 4.82940), (45.76617, 4.82903),
+    (45.76641, 4.82885), (45.76720, 4.82767), (45.76756, 4.82636),
+    (45.76753, 4.82376), (45.76743, 4.82265), (45.76679, 4.82014),
+    (45.76674, 4.81950), (45.76755, 4.81950), (45.76756, 4.81956),
 ]
-RHONE_WIDTH_M = 200.0
 
-# L'emprise ferroviaire de Perrache : voies, faisceau et autoroute A6 en
-# tranchée. Une grande surface centrale sans aucun logement.
+RHONE_POLYGON = [
+    (45.77424, 4.84161), (45.77255, 4.84060), (45.76947, 4.84046),
+    (45.76539, 4.84092), (45.76389, 4.84085), (45.75843, 4.84012),
+    (45.75636, 4.83930), (45.75228, 4.83648), (45.74578, 4.83143),
+    (45.74454, 4.82997), (45.74350, 4.82908), (45.74350, 4.82654),
+    (45.74724, 4.82974), (45.74880, 4.83124), (45.74904, 4.83131),
+    (45.75436, 4.83506), (45.75559, 4.83598), (45.75563, 4.83620),
+    (45.75604, 4.83650), (45.75618, 4.83643), (45.75728, 4.83723),
+    (45.75936, 4.83797), (45.76278, 4.83868), (45.76534, 4.83855),
+    (45.76539, 4.83864), (45.76730, 4.83842), (45.76928, 4.83836),
+    (45.77135, 4.83839), (45.77152, 4.83851), (45.77348, 4.83868),
+    (45.77450, 4.83933), (45.77445, 4.84172), (45.77424, 4.84161),
+]
+
 PERRACHE_RAILYARD = [
     (45.7512, 4.8238), (45.7512, 4.8336), (45.7484, 4.8340),
     (45.7478, 4.8300), (45.7480, 4.8240),
@@ -163,30 +202,6 @@ def meters_to_deg_lon(m: float, at_lat: float) -> float:
     return m / (111_320.0 * cos(radians(at_lat)))
 
 
-def thicken_centerline(centerline, width_m: float):
-    """Transforme un axe (liste de points) en polygone fermé de largeur donnée.
-
-    On décale chaque point de ±width/2 perpendiculairement à l'axe, puis on
-    parcourt les décalages positifs à l'aller et les négatifs au retour.
-    """
-    left, right = [], []
-    n = len(centerline)
-    for i, (lat, lon) in enumerate(centerline):
-        # direction locale de l'axe, approchée par le segment voisin
-        prev_pt = centerline[max(i - 1, 0)]
-        next_pt = centerline[min(i + 1, n - 1)]
-        dlat = next_pt[0] - prev_pt[0]
-        dlon = (next_pt[1] - prev_pt[1]) * cos(radians(lat))  # en "degrés de latitude"
-        norm = sqrt(dlat * dlat + dlon * dlon) or 1.0
-        # normale = rotation de 90° du vecteur directeur
-        nlat, nlon = -dlon / norm, dlat / norm
-        half_lat = meters_to_deg_lat(width_m / 2)
-        half_lon = meters_to_deg_lon(width_m / 2, lat)
-        left.append((lat + nlat * half_lat, lon + nlon * half_lon))
-        right.append((lat - nlat * half_lat, lon - nlon * half_lon))
-    return left + list(reversed(right))
-
-
 def point_in_polygon(lat: float, lon: float, polygon) -> bool:
     """Ray casting. Voir explanation.md §2.4."""
     inside = False
@@ -209,10 +224,8 @@ def point_in_polygon(lat: float, lon: float, polygon) -> bool:
 
 def build_inaccessible_polygons():
     return [
-        {"name": "La Saône", "kind": "water",
-         "polygon": thicken_centerline(SAONE_CENTERLINE, SAONE_WIDTH_M)},
-        {"name": "Le Rhône", "kind": "water",
-         "polygon": thicken_centerline(RHONE_CENTERLINE, RHONE_WIDTH_M)},
+        {"name": "La Saône", "kind": "water", "polygon": SAONE_POLYGON},
+        {"name": "Le Rhône", "kind": "water", "polygon": RHONE_POLYGON},
         {"name": "Emprise ferroviaire de Perrache", "kind": "infrastructure",
          "polygon": PERRACHE_RAILYARD},
     ]

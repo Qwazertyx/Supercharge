@@ -48,8 +48,8 @@
     "id": 2,
     "weight_uniform": 1.0,
     "weight_density": 0.2604,
-    "inaccessible": true,
-    "blocked_by": "La Saône"
+    "inaccessible": false,
+    "blocked_by": null
    }
   },
   {
@@ -116,8 +116,8 @@
     "id": 6,
     "weight_uniform": 1.0,
     "weight_density": 0.2986,
-    "inaccessible": true,
-    "blocked_by": "La Saône"
+    "inaccessible": false,
+    "blocked_by": null
    }
   },
   {
@@ -185,7 +185,7 @@
     "weight_uniform": 1.0,
     "weight_density": 0.2362,
     "inaccessible": true,
-    "blocked_by": "Emprise ferroviaire de Perrache"
+    "blocked_by": "Le Rhône"
    }
   },
   {
@@ -286,8 +286,8 @@
     "id": 16,
     "weight_uniform": 1.0,
     "weight_density": 0.2285,
-    "inaccessible": false,
-    "blocked_by": null
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
    }
   },
   {
@@ -354,8 +354,8 @@
     "id": 20,
     "weight_uniform": 1.0,
     "weight_density": 0.2433,
-    "inaccessible": true,
-    "blocked_by": "La Saône"
+    "inaccessible": false,
+    "blocked_by": null
    }
   },
   {
@@ -439,8 +439,8 @@
     "id": 25,
     "weight_uniform": 1.0,
     "weight_density": 0.3353,
-    "inaccessible": false,
-    "blocked_by": null
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
    }
   },
   {
@@ -473,8 +473,8 @@
     "id": 27,
     "weight_uniform": 1.0,
     "weight_density": 0.3091,
-    "inaccessible": true,
-    "blocked_by": "Le Rhône"
+    "inaccessible": false,
+    "blocked_by": null
    }
   },
   {
@@ -541,8 +541,8 @@
     "id": 31,
     "weight_uniform": 1.0,
     "weight_density": 0.2102,
-    "inaccessible": true,
-    "blocked_by": "La Saône"
+    "inaccessible": false,
+    "blocked_by": null
    }
   },
   {
@@ -558,8 +558,8 @@
     "id": 32,
     "weight_uniform": 1.0,
     "weight_density": 0.3573,
-    "inaccessible": false,
-    "blocked_by": null
+    "inaccessible": true,
+    "blocked_by": "La Saône"
    }
   },
   {
@@ -643,8 +643,8 @@
     "id": 37,
     "weight_uniform": 1.0,
     "weight_density": 0.4015,
-    "inaccessible": false,
-    "blocked_by": null
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
    }
   },
   {
@@ -660,8 +660,8 @@
     "id": 38,
     "weight_uniform": 1.0,
     "weight_density": 0.3946,
-    "inaccessible": true,
-    "blocked_by": "Le Rhône"
+    "inaccessible": false,
+    "blocked_by": null
    }
   },
   {
@@ -745,8 +745,8 @@
     "id": 43,
     "weight_uniform": 1.0,
     "weight_density": 0.3696,
-    "inaccessible": false,
-    "blocked_by": null
+    "inaccessible": true,
+    "blocked_by": "La Saône"
    }
   },
   {
@@ -830,8 +830,8 @@
     "id": 48,
     "weight_uniform": 1.0,
     "weight_density": 0.5111,
-    "inaccessible": false,
-    "blocked_by": null
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
    }
   },
   {
@@ -847,8 +847,8 @@
     "id": 49,
     "weight_uniform": 1.0,
     "weight_density": 0.4592,
-    "inaccessible": true,
-    "blocked_by": "Le Rhône"
+    "inaccessible": false,
+    "blocked_by": null
    }
   },
   {
@@ -949,8 +949,8 @@
     "id": 55,
     "weight_uniform": 1.0,
     "weight_density": 0.601,
-    "inaccessible": false,
-    "blocked_by": null
+    "inaccessible": true,
+    "blocked_by": "La Saône"
    }
   },
   {
@@ -1119,8 +1119,8 @@
     "id": 65,
     "weight_uniform": 1.0,
     "weight_density": 0.4227,
-    "inaccessible": true,
-    "blocked_by": "La Saône"
+    "inaccessible": false,
+    "blocked_by": null
    }
   },
   {
@@ -1289,8 +1289,8 @@
     "id": 75,
     "weight_uniform": 1.0,
     "weight_density": 0.3977,
-    "inaccessible": true,
-    "blocked_by": "La Saône"
+    "inaccessible": false,
+    "blocked_by": null
    }
   },
   {
@@ -1323,8 +1323,8 @@
     "id": 77,
     "weight_uniform": 1.0,
     "weight_density": 0.7759,
-    "inaccessible": false,
-    "blocked_by": null
+    "inaccessible": true,
+    "blocked_by": "La Saône"
    }
   },
   {
@@ -1476,8 +1476,8 @@
     "id": 86,
     "weight_uniform": 1.0,
     "weight_density": 0.7155,
-    "inaccessible": false,
-    "blocked_by": null
+    "inaccessible": true,
+    "blocked_by": "La Saône"
    }
   },
   {
@@ -1612,8 +1612,8 @@
     "id": 94,
     "weight_uniform": 1.0,
     "weight_density": 0.4289,
-    "inaccessible": true,
-    "blocked_by": "La Saône"
+    "inaccessible": false,
+    "blocked_by": null
    }
   },
   {
@@ -1629,8 +1629,8 @@
     "id": 95,
     "weight_uniform": 1.0,
     "weight_density": 0.6585,
-    "inaccessible": false,
-    "blocked_by": null
+    "inaccessible": true,
+    "blocked_by": "La Saône"
    }
   },
   {
@@ -1748,8 +1748,8 @@
     "id": 102,
     "weight_uniform": 1.0,
     "weight_density": 0.3777,
-    "inaccessible": true,
-    "blocked_by": "La Saône"
+    "inaccessible": false,
+    "blocked_by": null
    }
   },
   {
@@ -1765,8 +1765,8 @@
     "id": 103,
     "weight_uniform": 1.0,
     "weight_density": 0.6265,
-    "inaccessible": false,
-    "blocked_by": null
+    "inaccessible": true,
+    "blocked_by": "La Saône"
    }
   },
   {
@@ -1850,8 +1850,8 @@
     "id": 108,
     "weight_uniform": 1.0,
     "weight_density": 0.4142,
-    "inaccessible": true,
-    "blocked_by": "Le Rhône"
+    "inaccessible": false,
+    "blocked_by": null
    }
   },
   {
@@ -1952,8 +1952,8 @@
     "id": 114,
     "weight_uniform": 1.0,
     "weight_density": 0.6403,
-    "inaccessible": false,
-    "blocked_by": null
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
    }
   },
   {
@@ -1969,8 +1969,8 @@
     "id": 115,
     "weight_uniform": 1.0,
     "weight_density": 0.3803,
-    "inaccessible": true,
-    "blocked_by": "Le Rhône"
+    "inaccessible": false,
+    "blocked_by": null
    }
   },
   {
@@ -2071,8 +2071,8 @@
     "id": 121,
     "weight_uniform": 1.0,
     "weight_density": 0.5064,
-    "inaccessible": false,
-    "blocked_by": null
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
    }
   },
   {
@@ -2088,8 +2088,8 @@
     "id": 122,
     "weight_uniform": 1.0,
     "weight_density": 0.2993,
-    "inaccessible": true,
-    "blocked_by": "Le Rhône"
+    "inaccessible": false,
+    "blocked_by": null
    }
   },
   {
@@ -2122,8 +2122,8 @@
     "id": 124,
     "weight_uniform": 1.0,
     "weight_density": 0.346,
-    "inaccessible": true,
-    "blocked_by": "La Saône"
+    "inaccessible": false,
+    "blocked_by": null
    }
   },
   {
@@ -2190,8 +2190,8 @@
     "id": 128,
     "weight_uniform": 1.0,
     "weight_density": 0.3284,
-    "inaccessible": false,
-    "blocked_by": null
+    "inaccessible": true,
+    "blocked_by": "Le Rhône"
    }
   }
  ]

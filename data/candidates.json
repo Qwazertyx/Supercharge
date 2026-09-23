@@ -25,8 +25,8 @@
     {
       "id": 0,
       "name": "Place Bellecour",
-      "lat": 45.7578,
-      "lon": 4.8321
+      "lat": 45.7577,
+      "lon": 4.832
     },
     {
       "id": 1,
@@ -36,9 +36,9 @@
     },
     {
       "id": 2,
-      "name": "Place des Cordeliers",
-      "lat": 45.7639,
-      "lon": 4.8362
+      "name": "Place Beauregard",
+      "lat": 45.7578,
+      "lon": 4.8233
     },
     {
       "id": 3,
@@ -48,99 +48,99 @@
     },
     {
       "id": 4,
+      "name": "Place Saint-Paul",
+      "lat": 45.766,
+      "lon": 4.8274
+    },
+    {
+      "id": 5,
+      "name": "Place Gabriel Péri",
+      "lat": 45.7558,
+      "lon": 4.8434
+    },
+    {
+      "id": 6,
+      "name": "Vieux Lyon — Saint-Jean",
+      "lat": 45.7605,
+      "lon": 4.8271
+    },
+    {
+      "id": 7,
+      "name": "Place Maréchal Lyautey",
+      "lat": 45.7689,
+      "lon": 4.8411
+    },
+    {
+      "id": 8,
+      "name": "Quai Victor Augagneur",
+      "lat": 45.7624,
+      "lon": 4.8413
+    },
+    {
+      "id": 9,
+      "name": "Place des Cordeliers",
+      "lat": 45.7639,
+      "lon": 4.8362
+    },
+    {
+      "id": 10,
       "name": "Place des Jacobins",
       "lat": 45.7615,
       "lon": 4.8339
     },
     {
-      "id": 5,
-      "name": "Place Gabriel Péri",
-      "lat": 45.7541,
-      "lon": 4.8431
-    },
-    {
-      "id": 6,
-      "name": "Vieux Lyon — Saint-Jean",
-      "lat": 45.7609,
-      "lon": 4.8274
-    },
-    {
-      "id": 7,
-      "name": "Place Sathonay",
-      "lat": 45.7692,
-      "lon": 4.8318
-    },
-    {
-      "id": 8,
-      "name": "Quai Victor Augagneur",
-      "lat": 45.7572,
-      "lon": 4.8418
-    },
-    {
-      "id": 9,
-      "name": "Place Ampère",
-      "lat": 45.754,
-      "lon": 4.83
-    },
-    {
-      "id": 10,
-      "name": "Place Carnot",
-      "lat": 45.7513,
-      "lon": 4.8272
-    },
-    {
       "id": 11,
-      "name": "Place des Célestins",
-      "lat": 45.7592,
-      "lon": 4.8305
+      "name": "Place Sathonay",
+      "lat": 45.769,
+      "lon": 4.832
     },
     {
       "id": 12,
-      "name": "Place Saint-Nizier",
-      "lat": 45.7627,
-      "lon": 4.8335
+      "name": "Place des Célestins",
+      "lat": 45.7598,
+      "lon": 4.8318
     },
     {
       "id": 13,
-      "name": "Place Louis Pradel",
-      "lat": 45.7682,
-      "lon": 4.8365
+      "name": "Place Saint-Nizier",
+      "lat": 45.7647,
+      "lon": 4.8331
     },
     {
       "id": 14,
-      "name": "Quai Saint-Antoine",
-      "lat": 45.7625,
-      "lon": 4.8295
+      "name": "Place Louis Pradel",
+      "lat": 45.7684,
+      "lon": 4.8367
     },
     {
       "id": 15,
-      "name": "Place Antonin Poncet",
+      "name": "Place Antonin Jutard",
       "lat": 45.7566,
-      "lon": 4.8345
+      "lon": 4.8409
     },
     {
       "id": 16,
-      "name": "Place Raspail",
-      "lat": 45.7495,
-      "lon": 4.8395
+      "name": "Place Guichard",
+      "lat": 45.7588,
+      "lon": 4.8465
     },
     {
       "id": 17,
-      "name": "Place du Pont",
-      "lat": 45.7563,
-      "lon": 4.8425
+      "name": "Quai Général Sarrail",
+      "lat": 45.764,
+      "lon": 4.8414
     },
     {
       "id": 18,
-      "name": "Montée de la Grande-Côte",
-      "lat": 45.771,
-      "lon": 4.8305
+      "name": "Place du Change",
+      "lat": 45.7645,
+      "lon": 4.8283
     },
     {
       "id": 19,
-      "name": "Quai Sarrail",
-      "lat": 45.7645,
-      "lon": 4.8425
+      "name": "Place Raspail",
+      "lat": 45.7558,
+      "lon": 4.8404
     }
   ],
   "demand_poles": [

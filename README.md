@@ -55,52 +55,65 @@ revient à tout moment.
 | **Rayon `r`** | **300 m** |
 | **Poids des zones** | **uniformes** |
 | **Zones inaccessibles** | **retirées** (Rhône, Saône, emprise ferroviaire de Perrache) |
-| **Zones de demande** | 129 au total, dont **98 actives** après retrait des inaccessibles |
-| **Pénalité `P`** | automatique, `1,1 × max Wᵢ = 11,0` |
+| **Zones de demande** | 129 au total, dont **99 actives** après retrait des inaccessibles |
+| **Pénalité `P`** | automatique, `1,1 × max Wᵢ = 9,9` |
 | **QAOA** | `p = 3` couches, 3 redémarrages, COBYLA, 4096 mesures, graine 42 |
 
 ### Résultat attendu
 
 | | Sélection | Couverture | Travail | Temps |
 |---|---|---|---|---|
-| **Force brute** | `{0, 1, 5}` | **28,57 %** (28/98 zones) | **130** combinaisons | ~2 ms |
-| **QAOA** | `{0, 1, 5}` ou `{1, 4, 5}` | **28,57 %** | ~360 évaluations | ~2 s |
-| **Recuit simulé** | idem | **28,57 %** | ~28 800 propositions | ~0,6 s |
+| **Force brute** | `{0, 1, 5}` | **26,26 %** (26/99 zones) | **130** combinaisons | ~2 ms |
+| **QAOA** | `{0, 1, 5}` | **26,26 %** | ~360 évaluations | ~1,8 s |
+| **Recuit simulé** | `{0, 1, 5}` | **26,26 %** | ~28 800 propositions | ~0,6 s |
 
-> **Le problème admet exactement 2 placements optimaux distincts** de même
-> couverture : `{Bellecour, Terreaux, Gabriel Péri}` et
-> `{Terreaux, Jacobins, Gabriel Péri}`. QAOA alterne entre les deux au fil des
-> graines. Ce n'est pas une erreur : ce sont deux optima équivalents, et
-> l'interface le signale explicitement (« Optima équivalents »).
+> `{0, 1, 5}` = **{Bellecour, Terreaux, Gabriel Péri}** : un représentant par
+> rive. L'optimum est **unique** à `B = 3` et `r = 300 m`, donc les trois
+> solveurs doivent tomber exactement dessus. C'est le cas le plus sévère pour
+> QAOA : il n'a pas de second optimum sur lequel se rabattre.
+>
+> Faire varier `r` fait apparaître des optima multiples — l'interface les
+> signale alors (« Optima équivalents »). C'est un bon réglage à montrer en
+> soutenance : à `r = 325 m`, `{Bellecour, Terreaux, Gabriel Péri}` et
+> `{Terreaux, Gabriel Péri, Vieux Lyon}` couvrent exactement autant, et
+> QAOA alterne entre eux d'une graine à l'autre, ce qui n'est pas une erreur.
 
 ### Les 9 candidats de l'instance de référence
 
-| # | Lieu | Latitude | Longitude |
-|---|---|---|---|
-| 0 | Place Bellecour | 45.7578 | 4.8321 |
-| 1 | Place des Terreaux | 45.7674 | 4.8336 |
-| 2 | Place des Cordeliers | 45.7639 | 4.8362 |
-| 3 | Gare de Perrache | 45.7496 | 4.8262 |
-| 4 | Place des Jacobins | 45.7615 | 4.8339 |
-| 5 | Place Gabriel Péri | 45.7541 | 4.8431 |
-| 6 | Vieux Lyon — Saint-Jean | 45.7609 | 4.8274 |
-| 7 | Place Sathonay | 45.7692 | 4.8318 |
-| 8 | Quai Victor Augagneur | 45.7572 | 4.8418 |
+| # | Lieu | Latitude | Longitude | Rive |
+|---|---|---|---|---|
+| 0 | Place Bellecour | 45.7577 | 4.8320 | Presqu'île |
+| 1 | Place des Terreaux | 45.7674 | 4.8336 | Presqu'île |
+| 2 | Place Beauregard | 45.7578 | 4.8233 | rive droite |
+| 3 | Gare de Perrache | 45.7496 | 4.8262 | Presqu'île |
+| 4 | Place Saint-Paul | 45.7660 | 4.8274 | rive droite |
+| 5 | Place Gabriel Péri | 45.7558 | 4.8434 | rive gauche |
+| 6 | Vieux Lyon — Saint-Jean | 45.7605 | 4.8271 | rive droite |
+| 7 | Place Maréchal Lyautey | 45.7689 | 4.8411 | rive gauche |
+| 8 | Quai Victor Augagneur | 45.7624 | 4.8413 | rive gauche |
 
-Ces emplacements ne sont pas tirés au hasard : à 300 m de rayon ils forment
-**trois grappes qui se recouvrent partiellement** plus un isolé.
+Ces emplacements ne sont pas tirés au hasard. Ils sont répartis **trois par
+rive**, dans les proportions de la demande elle-même (30 % rive droite, 46 %
+Presqu'île, 24 % rive gauche), et à 300 m de rayon ils forment **deux grappes
+qui se recouvrent** plus quatre isolés.
 
 ```
-grappe A (cœur Presqu'île) : 0 Bellecour · 2 Cordeliers · 4 Jacobins · 6 Vieux Lyon   321–760 m
-grappe B (nord)            : 1 Terreaux  · 7 Sathonay                                     244 m
-grappe C (rive gauche)     : 5 Gabriel Péri · 8 Augagneur                                 359 m
-isolé                      : 3 Perrache                                             ≥ 1020 m
+grappe A (autour de la Saône) : 0 Bellecour · 2 Beauregard · 6 Vieux Lyon   421–675 m
+grappe B (nord)               : 1 Terreaux  · 4 Saint-Paul                      505 m
+isolés                        : 3 Perrache · 5 Gabriel Péri · 7 Lyautey · 8 Augagneur
 ```
 
 Avec `B = 3`, un bon solveur doit **choisir un représentant par grappe** plutôt
 qu'empiler des bornes redondantes. C'est précisément ce que le terme
-anti-redondance du QUBO encode. Un jeu de candidats sans recouvrement aurait
-rendu le problème séparable, donc sans intérêt.
+anti-redondance du QUBO encode : 4 zones sont à portée de deux candidats à la
+fois, aucune n'est à portée de trois — c'est ce qui rend la troncature au
+degré 2 exacte ici (voir plus bas). Un jeu de candidats sans recouvrement
+aurait rendu le problème séparable, donc sans intérêt.
+
+> Une version antérieure massait 6 des 9 candidats sur la Presqu'île. Le
+> problème restait valide, mais la carte laissait croire que les deux rives ne
+> comptaient pas, et le budget de 3 n'avait plus de véritable arbitrage
+> géographique à faire.
 
 ---
 
@@ -192,10 +205,12 @@ Or on peut borner cela sans rien énumérer : `s_max = maxⱼ min(|Cⱼ|, B)`.
 
 ```
 r = 300 m (défaut) →  s_max = 2   →  QUBO EXACT, écart mesuré : 0,0000
-r = 400 m et plus  →  s_max = 3   →  régime approché
+r ≤ 400 m          →  s_max = 2   →  QUBO EXACT
+r = 450 m et plus  →  s_max = 3   →  régime approché
 ```
 
-Aucune zone de la Presqu'île n'est à portée de trois candidats à 300 m.
+Aucune zone de la carte n'est à portée de trois candidats à 300 m : 4 zones
+en voient deux, aucune n'en voit trois.
 L'interface affiche un **indicateur de fidélité du QUBO** recalculé à chaque
 résolution, qui bascule en orange dès qu'on sort du régime exact.
 
@@ -398,6 +413,24 @@ la demande est trop diffuse pour justifier une infrastructure.
 > la fréquentation observable de chaque pôle. Ce ne sont pas des données
 > officielles de la Métropole, et le projet ne prétend pas le contraire.
 
+**Le Rhône et la Saône, eux, ne sont pas modélisés : ce sont les vraies
+emprises**, relevées sur OpenStreetMap (relations `7317123` et `660056`), puis
+découpées sur la zone d'étude et simplifiées par Douglas-Peucker à ~9 m près —
+1300 points ramenés à 39 pour la Saône, 1072 à 33 pour le Rhône. Les polygones
+sont figés en dur dans le script : aucune dépendance réseau, ni au build ni à
+l'exécution.
+
+La simplification est vérifiée plutôt que supposée : les 129 cellules de la
+grille reçoivent **exactement le même classement** accessible / inaccessible
+avec le polygone complet et avec sa version simplifiée.
+
+> Une version antérieure décrivait chaque fleuve par un axe rectiligne épaissi
+> à largeur constante. C'était faux de jusqu'à 350 m : un ruban droit ne peut
+> pas rendre le coude de la Saône, qui s'écarte vers l'ouest en descendant sur
+> Perrache puis quitte la zone au nord de Saint-Paul. Deux candidats étaient
+> mal placés dans la foulée, dont le quai Victor Augagneur, situé 580 m trop
+> au sud.
+
 ---
 
 ## Tests
@@ -428,7 +461,9 @@ python -m pytest tests/ -q
 
 Code du projet : usage pédagogique 42.
 
-- Fonds de carte : © contributeurs [OpenStreetMap](https://www.openstreetmap.org/copyright)
+- Fonds de carte **et géométrie des fleuves** : © contributeurs
+  [OpenStreetMap](https://www.openstreetmap.org/copyright), sous licence ODbL.
+  Les emprises du Rhône et de la Saône sont dérivées des données OSM.
 - [Leaflet](https://leafletjs.com/) 1.9.4 — BSD-2-Clause
 - [Chart.js](https://www.chartjs.org/) 4.4.4 — MIT
 - [Qiskit](https://www.ibm.com/quantum/qiskit) — Apache-2.0
